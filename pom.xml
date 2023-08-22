@@ -208,7 +208,6 @@
 		
         </plugins>
     </build>
-</project>
 <distributionManagement>
    <repository>
      <id>repsy</id>
@@ -216,3 +215,4 @@
      <url>https://repo.repsy.io/mvn/jireddy/rakesh</url>
    </repository>
 </distributionManagement>
+</project>
