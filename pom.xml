@@ -211,8 +211,8 @@
 </project>
 <distributionManagement>
    <repository>
-     <id>github</id>
-     <name>GitHub OWNER Apache Maven Packages</name>
-     <url>https://repsy.io/</url>
+     <id>repsy</id>
+     <name>MyPrivateMavenRepositoryonRepsy</name>
+     <url>https://repo.repsy.io/mvn/jireddy/rakesh</url>
    </repository>
 </distributionManagement>
