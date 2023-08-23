@@ -16,7 +16,7 @@ jobs:
            server-username: AWS_ACCESS_KEY_ID
            server-password: AWS_SECRET_ACCESS_KEY
        - name: Publish package
-         run: mvn--batch-mode deploy
+         run: mvn --batch-mode deploy
          env:
            AWS_ACCESS_KEY_ID: ${{secrets.USERNAME}}
            AWS_SECRET_ACCESS_KEY: ${{secrets.PASSWORD}}
