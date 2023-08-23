@@ -1,6 +1,8 @@
 name: Publish package to the Maven Central Repository
-on:
+on: 
   workflow_dispatch:
+  push: 
+    branches: [ "vp-rem" ]
     
 jobs:
   publish:
@@ -13,10 +15,10 @@ jobs:
            java-version: '11'
            distribution: 'temurin'
            server-id: repsy
-           server-username: AWS_ACCESS_KEY_ID
-           server-password: AWS_SECRET_ACCESS_KEY
+           server-username: MAVEN_USERNAME
+           server-password: MAVEN_PASSWORD
        - name: Publish package
          run: mvn --batch-mode deploy
          env:
-           AWS_ACCESS_KEY_ID: ${{secrets.USERNAME}}
-           AWS_SECRET_ACCESS_KEY: ${{secrets.PASSWORD}}
+           MAVEN_USERNAME: ${{secrets.AWS_ACCESS_KEY_ID}}
+           MAVEN_PASSWORD: ${{secrets.AWS_SECRET_ACCESS_KEY}}
